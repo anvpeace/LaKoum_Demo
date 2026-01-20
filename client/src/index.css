@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE - Vibrant Caribbean & Latinx Community Theme */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -8; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  /* Caribbean Color Palette - Warm Sandy Base */
+  --background: 38 35% 96%;
+  --foreground: 230 30% 15%;
+
+  --border: 32 25% 82%;
+
+  --card: 40 30% 98%;
+  --card-foreground: 230 30% 15%;
+  --card-border: 32 25% 85%;
+
+  --sidebar: 32 30% 94%;
+  --sidebar-foreground: 230 25% 18%;
+  --sidebar-border: 32 25% 82%;
+  --sidebar-primary: 190 78% 42%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 45 92% 88%;
+  --sidebar-accent-foreground: 38 80% 28%;
+  --sidebar-ring: 190 78% 42%;
+
+  --popover: 40 30% 98%;
+  --popover-foreground: 230 30% 15%;
+  --popover-border: 32 25% 82%;
+
+  /* Primary: Turquoise Sea */
+  --primary: 190 78% 42%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary: Warm Sand */
+  --secondary: 38 35% 92%;
+  --secondary-foreground: 230 25% 22%;
+
+  --muted: 32 25% 91%;
+  --muted-foreground: 230 15% 42%;
+
+  /* Accent: Sunset Coral */
+  --accent: 12 85% 58%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --input: 32 25% 82%;
+  --ring: 190 78% 42%;
+  
+  /* Extended Caribbean Palette */
+  --caribbean-turquoise: 190 78% 42%;
+  --caribbean-coral: 12 85% 58%;
+  --caribbean-gold: 45 92% 55%;
+  --caribbean-palm: 142 62% 38%;
+  --caribbean-magenta: 330 72% 55%;
+  --caribbean-indigo: 230 45% 28%;
+  
+  /* Charts use full Caribbean palette */
+  --chart-1: 190 78% 42%;
+  --chart-2: 12 85% 58%;
+  --chart-3: 45 92% 55%;
+  --chart-4: 142 62% 38%;
+  --chart-5: 330 72% 55%;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: .5rem;
+  --shadow-2xs: 0px 1px 2px 0px rgba(0,0,0,0.03);
+  --shadow-xs: 0px 1px 3px 0px rgba(0,0,0,0.04);
+  --shadow-sm: 0px 2px 4px -1px rgba(0,0,0,0.05);
+  --shadow: 0px 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-md: 0px 6px 10px -3px rgba(0,0,0,0.06);
+  --shadow-lg: 0px 10px 20px -5px rgba(0,0,0,0.08);
+  --shadow-xl: 0px 20px 40px -10px rgba(0,0,0,0.1);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0,0,0,0.15);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Automatically computed borders */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+
+  --opaque-button-border-intensity: 9;
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  /* Dark mode with Caribbean vibrancy */
+  --background: 230 30% 8%;
+  --foreground: 38 30% 95%;
+
+  --border: 230 20% 20%;
+
+  --card: 230 25% 11%;
+  --card-foreground: 38 30% 95%;
+  --card-border: 230 20% 18%;
+
+  --sidebar: 230 25% 10%;
+  --sidebar-foreground: 38 25% 90%;
+  --sidebar-border: 230 20% 18%;
+  --sidebar-primary: 190 75% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 45 70% 22%;
+  --sidebar-accent-foreground: 45 85% 75%;
+  --sidebar-ring: 190 75% 48%;
+
+  --popover: 230 25% 12%;
+  --popover-foreground: 38 30% 95%;
+  --popover-border: 230 20% 20%;
+
+  /* Primary: Brighter Turquoise for dark mode */
+  --primary: 190 75% 48%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 230 20% 18%;
+  --secondary-foreground: 38 25% 85%;
+
+  --muted: 230 20% 18%;
+  --muted-foreground: 230 15% 55%;
+
+  /* Accent: Vibrant Coral */
+  --accent: 12 82% 62%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --input: 230 20% 25%;
+  --ring: 190 75% 48%;
+  
+  /* Extended Caribbean Palette - Dark Mode */
+  --caribbean-turquoise: 190 75% 48%;
+  --caribbean-coral: 12 82% 62%;
+  --caribbean-gold: 45 88% 58%;
+  --caribbean-palm: 142 58% 45%;
+  --caribbean-magenta: 330 68% 60%;
+  --caribbean-indigo: 230 40% 45%;
+  
+  --chart-1: 190 75% 48%;
+  --chart-2: 12 82% 62%;
+  --chart-3: 45 88% 58%;
+  --chart-4: 142 58% 45%;
+  --chart-5: 330 68% 60%;
+
+  --shadow-2xs: 0px 1px 2px 0px rgba(0,0,0,0.2);
+  --shadow-xs: 0px 1px 3px 0px rgba(0,0,0,0.25);
+  --shadow-sm: 0px 2px 4px -1px rgba(0,0,0,0.3);
+  --shadow: 0px 4px 6px -2px rgba(0,0,0,0.35);
+  --shadow-md: 0px 6px 10px -3px rgba(0,0,0,0.4);
+  --shadow-lg: 0px 10px 20px -5px rgba(0,0,0,0.5);
+  --shadow-xl: 0px 20px 40px -10px rgba(0,0,0,0.6);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0,0,0,0.7);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/**
+ * Using the elevate system.
+ * Automatic contrast adjustment.
+ */
+@layer utilities {
+
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  /**
+   * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
+   */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  /* Does not work on elements with overflow:hidden! */
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}
